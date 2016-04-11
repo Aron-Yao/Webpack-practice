@@ -3,15 +3,20 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: './es6/index.js',
+    //multiple entry
+    entry: {
+        main: './es6/index.js',
+        base: ['vue', 'vue-router', 'q']
+    },
     output: {
         path: './build/',
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'        // [name]
     },
     module: {
         loaders: [
             {
                 loader: 'babel-loader',
+                query: {compact: false},    //query: compact ???
                 test: /\.jsx?$/             //PRO:  test: '/\.js$/' !!
             }, {
                 test: /\.css$/,
@@ -26,7 +31,10 @@ module.exports = {
     plugins: [
         // Avoid publishing files when compilation fails
         new webpack.NoErrorsPlugin(),
-        new ExtractTextPlugin('main.css', { allChunks: true })
+        new ExtractTextPlugin('main.css', { allChunks: true }),
+        new webpack.ProvidePlugin({     //...
+            Vue: "vue"
+        })
     ],
     // stats: {
     //     // Nice colored output
