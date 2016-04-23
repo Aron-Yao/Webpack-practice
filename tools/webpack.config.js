@@ -1,17 +1,16 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-var EXCLUDE = /node_modules/;
+let EXCLUDE = /node_modules/;
 
-module.exports = {
+export default {
     //multiple entry
     entry: {
-        main: './src/index.js',
-        base: ['vue', 'vue-router']
+        main: './src/index.js'
     },
     output: {
         path: './build/',
-        filename: '[name].bundle.js'
+        filename: '[name]_[hash].bundle.js'
     },
     module: {
         loaders: [

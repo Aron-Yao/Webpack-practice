@@ -4,11 +4,9 @@ Practice of Webpack
 * ES6 features
 * vue & vue-router
 * Sass
+* filenames with hash(version)
 
 ## How to start
-* install packages
-
-`npm install`
 
 * install homebrew
 
@@ -18,9 +16,13 @@ Practice of Webpack
 
 `sudo brew install sass`
 
+* install packages
+
+`npm install`
+
 * bundle project
 
-`webpack`
+`npm run build`
 
 * view index
 
