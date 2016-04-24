@@ -26,7 +26,7 @@ let bundle = (err, stats) => {
     });
 }
 
-let build = async () => {
+export default async () => {
     //clean "build" directory
     await clean();
 
@@ -36,6 +36,4 @@ let build = async () => {
     //build
     await compiler.run(bundle);
 }
-
-build();
 

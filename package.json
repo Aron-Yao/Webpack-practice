@@ -23,12 +23,14 @@
     "webpack": "^1.12.2"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "q": "^1.4.1",
     "sass": "^0.5.0",
     "vue": "^1.0.21",
     "vue-router": "^0.7.13"
   },
   "scripts": {
-    "build": "babel-node tools/build"
+    "build": "babel-node tools/run build",
+    "start": "babel-node tools/run build boot"
   }
 }
