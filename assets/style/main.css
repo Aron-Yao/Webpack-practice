@@ -1,0 +1,12 @@
+#svg-icons-symbols {
+  display: none;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-fire {
+  fill: red;
+}
