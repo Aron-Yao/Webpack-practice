@@ -20,7 +20,7 @@ todo
 * security: jwt code in http request
 * security: XSS defend
 * static resource files management
-* 
+* global variables 
 
 ## How to start
 
